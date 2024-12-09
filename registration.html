@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration - Handloom Fashion</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #e0f7fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background: #6a1b9a;
+            color: white;
+        }
+        .navbar-brand {
+            color: white !important;
+        }
+        .container {
+            margin-top: 80px; /* Space for fixed navbar */
+        }
+        .form-container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-container .form-group label {
+            color: #333;
+        }
+        .form-container .btn-success {
+            background-color: #ff4081;
+            border-color: #ff4081;
+        }
+        .form-container .btn-success:hover {
+            background-color: #f73378;
+            border-color: #f73378;
+        }
+        .form-container .alert {
+            margin-bottom: 20px;
+        }
+        .form-container .footer-text {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .form-container .footer-text a {
+            color: #ff4081;
+            text-decoration: none;
+        }
+        .form-container .footer-text a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="form-container">
+            <h1>Registration</h1>
+
+            <!-- Success message -->
+            <div th:if="${param.success}">
+                <div class="alert alert-info">You've successfully registered to our awesome app!</div>
+            </div>
+
+            <form th:action="@{/registration}" method="post" th:object="${user}">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input id="firstName" class="form-control" th:field="*{firstName}" required autofocus />
+                </div>
+
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input id="lastName" class="form-control" th:field="*{lastName}" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input id="email" class="form-control" th:field="*{email}" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input id="password" class="form-control" type="password" th:field="*{password}" required />
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success">Register</button>
+                    <div class="footer-text mt-3">
+                        Already registered? <a href="/" th:href="@{/login}">Login here</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

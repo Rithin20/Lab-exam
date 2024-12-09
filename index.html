@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home - Handloom Fashion</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #e0f7fa;
+            color: #333;
+        }
+        header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: #6a1b9a;
+            color: white;
+        }
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+        .header-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .btn {
+            background: #ff4081;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .info {
+            font-size: 18px;
+            margin: 20px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #6a1b9a;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+	<div class="logo">
+		<a href="index.html" style="color: white; text-decoration: none;">Handlooms</a>
+	</div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="artisans.html">Artisans</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="orders.html">Orders</a></li>
+        </ul>
+    </nav>
+    <div class="header-links">
+        <a href="logout.html" class="btn">LogOut</a>
+    </div>
+</header>
+
+<main>
+    <section class="content">
+        <h1>Welcome to Handloom Fashion</h1>
+        <p class="info">Explore our handloom products and shop the best traditional fashion from skilled artisans.</p>
+        <p class="info">Registration and Login powered by Spring Boot, Spring Security, Thymeleaf, Hibernate, and MySQL.</p>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Handloom Fashion. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
